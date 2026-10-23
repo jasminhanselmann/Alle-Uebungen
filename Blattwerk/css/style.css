@@ -1,0 +1,175 @@
+:root {
+  --hintergrund: #484344;
+  --text: #f1ecec;
+  --text-dim: #b3aaab;
+  --linie: #625a5b;
+  --gruen: #9cc47a;
+
+  --bildhoehe: 200px;
+  --abstand: 40px;
+  --zoom: 1.9;
+  --drehung: -6deg;
+  --tempo: 0.5s;
+
+  --schrift-titel: Georgia, "Times New Roman", serif;
+  --schrift: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--hintergrund);
+  color: var(--text);
+  font-family: var(--schrift);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.kopf,
+main,
+.fuss {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.kopf {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--linie);
+  margin-bottom: 48px;
+}
+
+.kopf h1 {
+  font-family: var(--schrift-titel);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+main {
+  padding-bottom: 80px;
+}
+
+.fuss {
+  padding-top: 16px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--linie);
+  color: var(--text-dim);
+}
+
+.fuss p {
+  margin: 0;
+}
+
+.wand {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--abstand);
+}
+
+.bild {
+  margin: 0;
+  min-width: 0;
+  position: relative;
+  z-index: 0;
+  transition: z-index 0s var(--tempo), opacity var(--tempo);
+}
+
+.blatt {
+  height: var(--bildhoehe);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.blatt img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  transform-origin: center bottom;
+  transition: transform var(--tempo) ease-in-out,
+              box-shadow var(--tempo) ease-in-out;
+}
+
+figcaption {
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--linie);
+  transition: border-color var(--tempo);
+}
+
+figcaption span {
+  display: block;
+}
+
+.nr {
+  color: var(--gruen);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+.name {
+  font-family: var(--schrift-titel);
+  font-size: 18px;
+}
+
+.latein {
+  font-family: var(--schrift-titel);
+  font-style: italic;
+  color: var(--text-dim);
+}
+
+.bild:hover {
+  z-index: 1;
+  transition-delay: 0s;
+}
+
+.bild:hover .blatt img {
+  transform: scale(var(--zoom)) rotate(var(--drehung));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.bild:hover figcaption {
+  border-top-color: var(--gruen);
+}
+
+.bild:nth-child(5n + 1) .blatt img {
+  transform-origin: left bottom;
+}
+
+.bild:nth-child(5n) .blatt img {
+  transform-origin: right bottom;
+}
+
+.wand:has(.bild:hover) .bild:not(:hover) {
+  opacity: 0.35;
+}
+
+@media (max-width: 900px) {
+  .wand {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bild:nth-child(n) .blatt img {
+    transform-origin: center bottom;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --zoom: 1.15;
+  }
+
+  .kopf h1 {
+    font-size: 40px;
+  }
+
+  .wand {
+    grid-template-columns: 1fr;
+  }
+}
