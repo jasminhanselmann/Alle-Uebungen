@@ -1,0 +1,115 @@
+/*
+Uebung2_b – „Ruhige Leseliste"
+Serifenschrift, grosszügiger Zeilenabstand für konzentriertes Repetieren.
+Trennung der Einträge über dünne Linien. Analog zu den Karten in
+Uebung2_a bekommt nur der Textbereich ein flaches, transparentes Feld
+für Lesbarkeit (ohne Ecken/Schatten) – Titel, Navigation und die Ränder
+zeigen das Foto weiterhin vollständig.
+*/
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f7f3ec;
+    background-image: url("Hund2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 2.5rem 0;
+}
+
+main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #1c3a5e;
+    margin-bottom: 1.875rem;
+    letter-spacing: 0.02em;
+}
+
+nav {
+    margin-bottom: 2.5rem;
+    padding: 1rem 1.25rem;
+    background-color: rgba(255, 255, 255, 0.78);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1c3a5e;
+    font-weight: bold;
+    margin-right: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #a8542e;
+}
+
+h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-top: 2.8125rem;
+    margin-bottom: 1rem;
+    color: #a8542e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Trennung über die Linie; das transparente Feld dient nur der Lesbarkeit
+   und hat bewusst keinen Radius/Schatten (kein Karten-Look wie in Uebung2_a) */
+li {
+    background-color: rgba(255, 255, 255, 0.78);
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid #d8cfc2;
+    transition: background-color 0.2s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: rgba(28, 58, 94, 0.12);
+}
+
+/* Titel: kompakte Zeilenhöhe passend zu kurzen Fachbegriffen */
+strong {
+    display: block;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+    line-height: 1.3;
+    color: #1c3a5e;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+li:hover strong {
+    color: #a8542e;
+}
+
+/* Fliesstext: 17px / 1.75 – grosszügig, weil beim Repetieren längere
+   Sätze am Stück gelesen werden und mehr Weissraum die Lesbarkeit erhöht */
+p {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+    color: #3a3a3a;
+}
