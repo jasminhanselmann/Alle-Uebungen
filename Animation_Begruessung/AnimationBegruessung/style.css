@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap');
+
+.sigmar-regular {
+  font-family: "Sigmar", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Scoutie Sans", sans-serif;
+  font-size: 15vw;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: baseline; 
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1 div {
+  line-height: 80%;
+}
+
+.MUS {
+  color: white;
+}
+
+.KA {
+  color: blueviolet;
+  transform: translateY(-5vw); 
+  transition: all 1s;
+}
+
+h1:hover .KA {
+  transform: translateY(0);
+  color: blue;
+
+}
+
+.TA {
+  color: blue;
+  transform: translateY(5vw);
+  transition: all 1s;
+  transition-delay: 0.5s;
+}
+
+h1:hover .TA {
+  transform: translateY(0);
+  color: blueviolet;
+}
+
+.MUS {
+  color: white;
+  font-family: "Sigmar", sans-serif;
+}
+
+
+
+
