@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap');
+
+body {
+    font-family: "Scoutie Sans", sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #d53369);
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.Hello {
+    font-family: "Oswald", sans-serif;
+    animation-name: Hello;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.ready {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    animation-name: ready;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.Hello2 {
+    font-family: "Oswald", sans-serif;
+    animation-name: Hello2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.ready2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    animation-name: ready2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Hello {
+    0% {
+        transform: translate(0, -100vh);
+        opacity: 0;
+    }
+
+    15% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes ready {
+    0%, 15% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    30% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    85% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    95%, 100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes Hello2 {
+    0%, 30% {
+        transform: translate(-100vw, 0);
+        opacity: 0;
+    }
+
+    45% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes ready2 {
+    0%, 45% {
+        transform: rotate(-360deg) scale(0);
+        opacity: 0;
+    }
+
+    60% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+        color: white;
+    }
+
+    70%, 85% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+        color: rgb(255, 220, 120);
+    }
+
+    95%, 100% {
+        transform: rotate(0) scale(1);
+        opacity: 0;
+        color: rgb(255, 220, 120);
+    }
+}

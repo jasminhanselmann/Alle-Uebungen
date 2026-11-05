@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Sigmar&display=swap');
+
+body {
+    font-family: "Scoutie Sans", sans-serif;
+    overflow-x: hidden;
+    animation-name: hintergrund;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hintergrund {
+    0%, 100% {
+        background-color: rgb(255, 245, 230);
+    }
+
+    33% {
+        background-color: rgb(230, 240, 255);
+    }
+
+    66% {
+        background-color: rgb(245, 230, 250);
+    }
+}
+
+.Hello {
+    font-family: "Oswald", sans-serif;
+    animation-name: Hello;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.ready {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    animation-name: ready;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.Hello2 {
+    font-family: "Scoutie Sans", sans-serif;
+    animation-name: Hello2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.ready2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 200;
+    animation-name: ready2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Hello {
+    0% {
+        transform: translate(-100vw, 0);
+        opacity: 1;
+        color: rgb(13, 13, 230);
+    }
+
+    15% {
+        transform: translate(0, 0);
+        opacity: 1;
+        color: rgb(61, 45, 133);
+    }
+
+    85% {
+        transform: translate(0, 0);
+        opacity: 1;
+        color: rgb(197, 51, 210);
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+        color: rgb(190, 115, 190);
+    }
+}
+
+@keyframes ready {
+    0%, 15% {
+        transform: translate(100vw, 0);
+        opacity: 0;
+        font-weight: 200;
+        color: rgb(149, 20, 74);
+    }
+
+    30% {
+        transform: translate(0, 0);
+        opacity: 1;
+        font-weight: 200;
+        color: rgb(108, 26, 78);
+    }
+
+    40%, 85% {
+        transform: translate(0, 0);
+        opacity: 1;
+        font-weight: 800;
+        color: rgb(224, 186, 209);
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+        font-weight: 800;
+        color: rgb(224, 186, 209);
+    }
+}
+
+@keyframes Hello2 {
+    0%, 30% {
+        transform: translate(-100vw, 0);
+        opacity: 0;
+        color: rgb(200, 60, 20);
+    }
+
+    45% {
+        transform: translate(0, 0);
+        opacity: 1;
+        color: rgb(230, 110, 30);
+    }
+
+    85% {
+        transform: translate(0, 0);
+        opacity: 1;
+        color: rgb(245, 160, 40);
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+        color: rgb(245, 160, 40);
+    }
+}
+
+@keyframes ready2 {
+    0%, 45% {
+        transform: translate(200vw, 0);
+        opacity: 0;
+        font-weight: 200;
+        color: rgb(70, 30, 100);
+    }
+
+    60% {
+        transform: translate(0, 0);
+        opacity: 1;
+        font-weight: 200;
+        color: rgb(110, 50, 150);
+    }
+
+    70%, 85% {
+        transform: translate(0, 0);
+        opacity: 1;
+        font-weight: 800;
+        color: rgb(150, 70, 180);
+    }
+
+    95%, 100% {
+        transform: translate(0, 0);
+        opacity: 0;
+        font-weight: 800;
+        color: rgb(150, 70, 180);
+    }
+}
